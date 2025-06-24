@@ -12,3 +12,4 @@ const NoFriends = () => {
 }
 
 export default NoFriends
+

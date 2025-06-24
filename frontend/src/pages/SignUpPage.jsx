@@ -130,3 +130,5 @@ export default SignUpPage
  * default action of the form which is submitting the form and refreshing the page
  * called mutate function - sending sequest if success the refetch the query and navigated to homepage
  */
+
+

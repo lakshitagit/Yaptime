@@ -13,6 +13,7 @@ const Navbar = () => {
     const location = useLocation();
     const isChatPage = location.pathname?.startsWith("/chat");
 
+    
     // const queryClient = useQueryClient();
     // const {mutate:logoutMutation,isPending,error}=useMutation({
     //     mutationFn: logout,

@@ -90,3 +90,4 @@ export default App;
 
 //zustand -- for theme selector
 //create a hook with useStre then you can use state anywher ein the application for global state like redux
+

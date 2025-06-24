@@ -32,6 +32,7 @@ const ThemeSelector = () => {
                                     style={{backgroundColor:color}}
                                     >
 
+
                                     </span>
                                 ))}
                             </div>
