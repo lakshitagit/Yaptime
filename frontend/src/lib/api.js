@@ -7,11 +7,15 @@ export const signup = async (signupData) => {
 
 
 
-
-export const login = async(loginData)=>{
-  const response = await axiosInstance.post("/auth/login",loginData);
-  return response.data;
-}
+export const login = async (loginData) => {
+  try {
+    const response = await axiosInstance.post("/auth/login", loginData);
+    return response.data;
+  } catch (error) {
+    console.error("Login failed:", error.response || error.message);
+    throw error; // rethrow if needed by react-query or caller
+  }
+};
 
 export const logout = async()=>{
   const response = await axiosInstance.post("/auth/logout");
@@ -21,6 +25,7 @@ export const logout = async()=>{
 export const getAuthUser = async()=>{
       try{
         const res = await axiosInstance.get('/auth/me');
+        console.log(res.data)
       return res.data;
       }
       catch(error){
@@ -60,6 +65,16 @@ export async function getFriendRequests(){
 }
 
 export async function acceptFriendRequest(requestId){
-  const response = await axiosInstance.post(`/users/friend-request/${requestId}/accept`);
+  const response = await axiosInstance.put(`/users/friend-request/${requestId}/accept`);
+  return response.data;
+}
+
+
+//tansatck automatially send the api call once you go on the page
+
+export async function getStreamToken(){
+  console.log('Inside the get stream token function');
+  const response = await axiosInstance.get('/chat/token');
+  console.log(response.data);
   return response.data;
 }

@@ -8,6 +8,5 @@ export const useThemeStore = create((set)=>({
     },
 })) 
 
-//this objec is accesible in the enitre project
+//this object is accesible in the enitre project
 //use local storage to make sure the state or the theme remains the same on refreshing
-

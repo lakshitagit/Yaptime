@@ -6,7 +6,7 @@ import { Link } from 'react-router';
 import { CheckCircleIcon, MapPinIcon, UserPlusIcon, UsersIcon } from 'lucide-react';
 import FriendCard, { getLanguageFlag } from '../components/FriendCard';
 import NoFriends from '../components/NoFriends';
-
+import { capitalize } from '../lib/utils';
 const HomePage = () => {
   const {theme,setTheme} = useThemeStore();
   const queryClient = useQueryClient();
@@ -161,6 +161,4 @@ useEffect(()=>{
 
 export default HomePage;
 
-
-export const capitalize = (str) => str.charAt(0).toUpperCase()+str.slice(1);
 

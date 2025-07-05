@@ -45,8 +45,8 @@ const OnBoardingPage = () => {
   };
 
   const handleRandomAvatar = () => {
-    const idx = Math.floor(Math.random() * 100) + 1;
-    const randomAvatar = `https://avatar.iran.liara.run/public/${idx}.png`;
+   const seed = Math.random().toString(36).substring(7);  // random string like 'k3jda'
+const randomAvatar = `https://api.dicebear.com/9.x/adventurer/svg?seed=${seed}`;
     setFormState({ ...formState, profilePic: randomAvatar });
     toast.success('Avatar changed successfully');
   };

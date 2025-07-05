@@ -13,6 +13,7 @@ const Navbar = () => {
     const location = useLocation();
     const isChatPage = location.pathname?.startsWith("/chat");
 
+    console.log("Profile picture ",authUser.profilePic);
     
     // const queryClient = useQueryClient();
     // const {mutate:logoutMutation,isPending,error}=useMutation({
